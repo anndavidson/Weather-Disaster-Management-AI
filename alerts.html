@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Risk Analysis</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🌦️ AI Weather & Disaster Management</h1>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="weather.html">Weather</a>
+
+        <a href="alerts.html">Risk Analysis</a>
+
+        <a href="forecast.html">Forecast</a>
+
+        <a href="about.html">About AI</a>
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <h2>🌧️ Weather Dataset & Risk Analysis</h2>
+
+    <p class="intro">
+
+        The disaster risk shown on this page is calculated
+        from the actual weather dataset retrieved from
+        the weather API.
+
+    </p>
+
+
+    <!-- LOCATION -->
+
+    <section class="card">
+
+        <h2>📍 Selected Location</h2>
+
+        <h3 id="locationName">
+            No weather data loaded
+        </h3>
+
+        <p>
+            Search for a city from the Weather page
+            before viewing the risk analysis.
+        </p>
+
+    </section>
+
+
+    <!-- DATASET -->
+
+    <section class="card">
+
+        <h2>🌦️ Actual Weather Dataset</h2>
+
+        <p>
+            These are the weather values received from
+            the API and used by the risk engine.
+        </p>
+
+
+        <div class="dataset-grid">
+
+            <div class="data-box">
+
+                <h3>🌡️ Temperature</h3>
+
+                <p id="datasetTemperature">
+                    Waiting for data...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>💧 Humidity</h3>
+
+                <p id="datasetHumidity">
+                    Waiting for data...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>🌧️ Rainfall</h3>
+
+                <p id="datasetRainfall">
+                    Waiting for data...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>💨 Wind Speed</h3>
+
+                <p id="datasetWind">
+                    Waiting for data...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>🌪️ Wind Gust</h3>
+
+                <p id="datasetWindGust">
+                    Waiting for data...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>🧭 Pressure</h3>
+
+                <p id="datasetPressure">
+                    Waiting for data...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>⚡ CAPE</h3>
+
+                <p id="datasetCape">
+                    Waiting for data...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>☁️ Weather</h3>
+
+                <p id="datasetWeather">
+                    Waiting for data...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RISK ANALYSIS -->
+
+    <section>
+
+        <h2>⚠️ Disaster Risk Analysis</h2>
+
+
+        <div class="risk-grid">
+
+
+            <!-- RAIN -->
+
+            <div class="risk-card">
+
+                <h3>🌧️ Heavy Rain Risk</h3>
+
+                <p
+                    id="rainRisk"
+                    class="risk-value">
+                    Waiting for weather data...
+                </p>
+
+                <p id="rainCalculation">
+                    Weather data required.
+                </p>
+
+            </div>
+
+
+            <!-- FLOOD -->
+
+            <div class="risk-card">
+
+                <h3>🌊 Flood Potential</h3>
+
+                <p
+                    id="floodRisk"
+                    class="risk-value">
+                    Waiting for weather data...
+                </p>
+
+                <p id="floodCalculation">
+                    Weather data required.
+                </p>
+
+            </div>
+
+
+            <!-- WIND -->
+
+            <div class="risk-card">
+
+                <h3>💨 Wind Hazard</h3>
+
+                <p
+                    id="windRisk"
+                    class="risk-value">
+                    Waiting for weather data...
+                </p>
+
+                <p id="windCalculation">
+                    Weather data required.
+                </p>
+
+            </div>
+
+
+            <!-- THUNDERSTORM -->
+
+            <div class="risk-card">
+
+                <h3>⚡ Thunderstorm Risk</h3>
+
+                <p
+                    id="stormRisk"
+                    class="risk-value">
+                    Waiting for weather data...
+                </p>
+
+                <p id="stormCalculation">
+                    Weather data required.
+                </p>
+
+            </div>
+
+
+            <!-- HEAT -->
+
+            <div class="risk-card">
+
+                <h3>🌡️ Heat Stress</h3>
+
+                <p
+                    id="heatRisk"
+                    class="risk-value">
+                    Waiting for weather data...
+                </p>
+
+                <p id="heatCalculation">
+                    Weather data required.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OVERALL -->
+
+    <section class="overall-risk card">
+
+        <h2>🚨 Overall Weather Risk</h2>
+
+        <p
+            id="overallStatus"
+            class="risk-value">
+            Waiting for weather data...
+        </p>
+
+        <p>
+
+            The overall level is based on the highest
+            calculated weather-related risk among the
+            monitored hazards.
+
+        </p>
+
+    </section>
+
+
+    <!-- EXPLANATION -->
+
+    <section class="card">
+
+        <h2>🧠 How the Risk Engine Works</h2>
+
+        <ol>
+
+            <li>
+                The user selects a location.
+            </li>
+
+            <li>
+                The system retrieves the weather
+                forecast dataset.
+            </li>
+
+            <li>
+                The system reads rainfall, wind,
+                pressure, soil moisture, runoff,
+                temperature and atmospheric data.
+            </li>
+
+            <li>
+                Each hazard is analysed separately.
+            </li>
+
+            <li>
+                A project-defined risk score from
+                0 to 100 is generated.
+            </li>
+
+            <li>
+                The score is converted into
+                Low, Moderate, High or Severe.
+            </li>
+
+        </ol>
+
+    </section>
+
+
+    <!-- DISCLAIMER -->
+
+    <section class="warning">
+
+        <h3>⚠️ Important</h3>
+
+        <p>
+
+            These are weather-based risk indicators
+            created for this academic project.
+
+            They are not official government disaster
+            warnings.
+
+        </p>
+
+        <p>
+
+            Actual flood, cyclone and disaster warnings
+            require additional information such as
+            river levels, terrain, drainage conditions,
+            storm structure, satellite observations and
+            official meteorological analysis.
+
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        AI Weather & Disaster Management Project
+    </p>
+
+    <p>
+        Weather data source: Open-Meteo
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

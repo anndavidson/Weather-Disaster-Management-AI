@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --bg: #07111f;
+    --bg2: #0b1930;
+    --card: rgba(255, 255, 255, 0.07);
+    --card-border: rgba(255, 255, 255, 0.12);
+    --text: #f4f8ff;
+    --muted: #9eacc2;
+    --blue: #4da3ff;
+    --cyan: #39d9ff;
+    --purple: #8b6cff;
+    --green: #36e0a0;
+    --yellow: #ffd166;
+    --orange: #ff9f43;
+    --red: #ff5c77;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(77, 163, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(139, 108, 255, 0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #050b15,
+            #071525,
+            #0a1730
+        );
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   BACKGROUND EFFECT
+================================ */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(57, 217, 255, 0.08),
+            transparent 70%
+        );
+
+    top: 40%;
+    left: -200px;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px 7%;
+
+    background:
+        rgba(5, 12, 25, 0.78);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+
+header h1 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #69c9ff,
+            #9b83ff
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+nav {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+nav a {
+    text-decoration: none;
+
+    color: var(--muted);
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+
+nav a:hover {
+    color: white;
+
+    background:
+        rgba(77, 163, 255, 0.12);
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.container {
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    padding: 60px 0;
+}
+
+
+.container > h2 {
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 38px;
+
+    margin-bottom: 12px;
+}
+
+
+.intro {
+    color: var(--muted);
+
+    max-width: 750px;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.09),
+            rgba(255,255,255,0.035)
+        );
+
+    border:
+        1px solid
+        var(--card-border);
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+    margin: 25px 0;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.25);
+
+    transition:
+        transform 0.3s,
+        border 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(77,163,255,0.3);
+}
+
+
+.card h2 {
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    margin-bottom: 12px;
+}
+
+
+/* ================================
+   DATASET
+================================ */
+
+.dataset-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        );
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+.data-box {
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    transition: 0.25s;
+}
+
+
+.data-box:hover {
+    background:
+        rgba(77,163,255,0.08);
+
+    transform:
+        translateY(-3px);
+}
+
+
+.data-box h3 {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+
+.data-box p {
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: white;
+}
+
+
+/* ================================
+   RISK GRID
+================================ */
+
+.risk-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+
+.risk-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.09),
+            rgba(255,255,255,0.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    transition: 0.3s;
+}
+
+
+.risk-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    right: -40px;
+    bottom: -40px;
+
+    background:
+        rgba(77,163,255,0.08);
+}
+
+
+.risk-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(77,163,255,0.35);
+}
+
+
+.risk-card h3 {
+    font-size: 16px;
+
+    color: #d9e5f5;
+
+    margin-bottom: 15px;
+}
+
+
+.risk-value {
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin: 12px 0;
+}
+
+
+.risk-card p:last-child {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   RISK COLORS
+================================ */
+
+.risk-value.low {
+    color: var(--green);
+}
+
+
+.risk-value.moderate {
+    color: var(--yellow);
+}
+
+
+.risk-value.high {
+    color: var(--orange);
+}
+
+
+.risk-value.severe {
+    color: var(--red);
+
+    text-shadow:
+        0 0 20px
+        rgba(255,92,119,0.35);
+}
+
+
+/* ================================
+   OVERALL RISK
+================================ */
+
+.overall-risk {
+    text-align: center;
+
+    padding: 45px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(77,163,255,0.12),
+            rgba(255,255,255,0.04)
+        );
+}
+
+
+.overall-risk .risk-value {
+    font-size: 42px;
+
+    margin: 20px 0;
+}
+
+
+/* ================================
+   WARNING
+================================ */
+
+.warning {
+    margin-top: 30px;
+
+    padding: 22px 25px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 209, 102, 0.08);
+
+    border:
+        1px solid
+        rgba(255, 209, 102, 0.25);
+
+    color: #f4d98c;
+
+    line-height: 1.7;
+}
+
+
+.warning h3 {
+    color: #ffd166;
+
+    margin-bottom: 8px;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    padding: 13px 22px;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3c9cff,
+            #765cff
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(77,163,255,0.25);
+
+    transition: 0.25s;
+}
+
+
+button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(77,163,255,0.4);
+}
+
+
+/* ================================
+   INPUT
+================================ */
+
+input {
+    width: 100%;
+
+    padding: 15px 17px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    background:
+        rgba(255,255,255,0.06);
+
+    color: white;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+
+input::placeholder {
+    color: #75849a;
+}
+
+
+input:focus {
+    border-color:
+        rgba(77,163,255,0.6);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(77,163,255,0.1);
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    margin-top: 20px;
+}
+
+
+th {
+    background:
+        rgba(77,163,255,0.12);
+
+    color: #bcd8f5;
+
+    text-align: left;
+
+    padding: 15px;
+
+    font-size: 13px;
+}
+
+
+td {
+    padding: 15px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.07);
+
+    color: #c4d0df;
+
+    font-size: 14px;
+}
+
+
+tr:hover td {
+    background:
+        rgba(255,255,255,0.035);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    margin-top: 50px;
+
+    color: #718096;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.07);
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   ANIMATION
+================================ */
+
+.card,
+.risk-card,
+.data-box {
+    animation:
+        fadeUp 0.6s ease both;
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px;
+    }
+
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .container {
+        width: 92%;
+
+        padding-top: 40px;
+    }
+
+
+    .container > h2 {
+        font-size: 30px;
+    }
+
+
+    .overall-risk .risk-value {
+        font-size: 32px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    nav a {
+        font-size: 12px;
+
+        padding: 8px 10px;
+    }
+
+
+    .card {
+        padding: 20px;
+    }
+
+
+    .dataset-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+.hero {
+    min-height: 70vh;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 80px 8%;
+}
+
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(57,217,255,0.18),
+            transparent 70%
+        );
+
+    right: 5%;
+
+    top: 10%;
+
+    animation:
+        float 6s ease-in-out infinite;
+}
+
+
+.hero-content {
+    max-width: 800px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.hero-label {
+    display: inline-block;
+
+    padding: 8px 13px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(77,163,255,0.1);
+
+    border:
+        1px solid
+        rgba(77,163,255,0.25);
+
+    color: #70c7ff;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h2 {
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        clamp(45px, 7vw, 80px);
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h2 span {
+    background:
+        linear-gradient(
+            90deg,
+            #45d7ff,
+            #8d72ff
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.hero p {
+    color: var(--muted);
+
+    font-size: 18px;
+
+    max-width: 600px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+.search-box {
+    display: flex;
+
+    gap: 10px;
+
+    max-width: 700px;
+
+    flex-wrap: wrap;
+}
+
+
+.search-box input {
+    flex: 1;
+
+    min-width: 240px;
+}
+
+
+@keyframes float {
+
+    0%, 100% {
+        transform:
+            translateY(0px);
+    }
+
+    50% {
+        transform:
+            translateY(-25px);
+    }
+
+}

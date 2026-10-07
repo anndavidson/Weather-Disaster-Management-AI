@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Analysis | AI Disaster Alert</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+    <h1>🌦️ AI Disaster Alert</h1>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="weather.html">Weather</a>
+
+        <a href="alerts.html">Risk Analysis</a>
+
+        <a href="forecast.html">Forecast</a>
+
+        <a href="about.html">About AI</a>
+
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- LOCATION -->
+
+    <section class="card">
+
+        <p class="hero-label">
+            ✦ LIVE WEATHER DATA
+        </p>
+
+        <h2 id="locationName">
+            Loading location...
+        </h2>
+
+        <p id="weatherDescription">
+            Loading weather...
+        </p>
+
+    </section>
+
+
+
+    <!-- CURRENT WEATHER -->
+
+    <section class="card">
+
+        <h2>🌤️ Current Weather</h2>
+
+
+        <div class="dataset-grid">
+
+
+            <div class="data-box">
+
+                <h3>🌡️ Temperature</h3>
+
+                <p id="temperature">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>🌡️ Feels Like</h3>
+
+                <p id="feelsLike">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>💧 Humidity</h3>
+
+                <p id="humidity">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>💨 Wind</h3>
+
+                <p id="wind">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>🌧️ Rain</h3>
+
+                <p id="rain">
+                    Loading...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- DATASET -->
+
+    <section class="card">
+
+        <h2>📊 Weather Dataset Used for Analysis</h2>
+
+        <p class="intro">
+
+            The following values are retrieved from
+            the weather API and are used as inputs
+            for the disaster risk analysis.
+
+        </p>
+
+
+        <div class="dataset-grid">
+
+
+            <div class="data-box">
+
+                <h3>Temperature</h3>
+
+                <p id="datasetTemperature">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>Humidity</h3>
+
+                <p id="datasetHumidity">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>Rainfall</h3>
+
+                <p id="datasetRainfall">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>Wind Speed</h3>
+
+                <p id="datasetWind">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>Wind Gust</h3>
+
+                <p id="datasetWindGust">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>Pressure</h3>
+
+                <p id="datasetPressure">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>CAPE</h3>
+
+                <p id="datasetCape">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div class="data-box">
+
+                <h3>Weather Condition</h3>
+
+                <p id="datasetWeather">
+                    Loading...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- GO TO RISK -->
+
+    <section class="overall-risk card">
+
+        <h2>🧠 Weather Dataset Loaded</h2>
+
+        <p>
+
+            The actual weather dataset has been
+            retrieved successfully.
+
+        </p>
+
+        <br>
+
+        <button
+            onclick="window.location.href='alerts.html'">
+
+            View AI Risk Analysis →
+
+        </button>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        AI Weather & Disaster Management
+    </p>
+
+    <p>
+        Weather data provided by Open-Meteo
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
